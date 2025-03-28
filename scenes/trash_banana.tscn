@@ -1,0 +1,37 @@
+[gd_scene load_steps=6 format=3 uid="uid://dpw48lsuuj4cb"]
+
+[ext_resource type="Texture2D" uid="uid://n6ocd7fy4o5t" path="res://assets/banana.png" id="1_fxpo0"]
+[ext_resource type="Script" uid="uid://dr2gye0kp5myp" path="res://scripts/trash_banana.gd" id="1_u5ug7"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u5ug7"]
+atlas = ExtResource("1_fxpo0")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ebm1x"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u5ug7")
+}],
+"loop": true,
+"name": &"banana",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6h25a"]
+size = Vector2(39, 25)
+
+[node name="Trash Banana" type="Area2D"]
+z_index = 2
+collision_mask = 2
+script = ExtResource("1_u5ug7")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_ebm1x")
+animation = &"banana"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 1.5)
+shape = SubResource("RectangleShape2D_6h25a")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

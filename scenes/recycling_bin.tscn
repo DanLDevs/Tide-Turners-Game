@@ -1,0 +1,32 @@
+[gd_scene load_steps=6 format=3 uid="uid://ca60n7wnrhl7f"]
+
+[ext_resource type="Script" uid="uid://bwfkbe8tgeqoe" path="res://scripts/recycling_bin.gd" id="1_tlfpw"]
+[ext_resource type="Texture2D" uid="uid://bnko2r3jd4r5g" path="res://assets/bins.png" id="2_tlfpw"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vgqc8"]
+atlas = ExtResource("2_tlfpw")
+region = Rect2(373, 78, 154, 188)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_iwih6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vgqc8")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t5sml"]
+size = Vector2(184, 218)
+
+[node name="Area2D" type="Area2D"]
+collision_mask = 2
+script = ExtResource("1_tlfpw")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_iwih6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_t5sml")

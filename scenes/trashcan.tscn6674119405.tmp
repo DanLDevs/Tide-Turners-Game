@@ -1,0 +1,36 @@
+[gd_scene load_steps=7 format=3 uid="uid://dhhecpycdyk4w"]
+
+[ext_resource type="Script" uid="uid://d1rtaqpflsq1" path="res://scripts/trashcan.gd" id="1_1btkc"]
+[ext_resource type="Texture2D" uid="uid://yji15dgbf1ar" path="res://assets/Everhood - Trash Can.png" id="2_1btkc"]
+[ext_resource type="PackedScene" uid="uid://bevpitnxncxhj" path="res://scenes/sorting_game.tscn" id="2_501ro"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_501ro"]
+atlas = ExtResource("2_1btkc")
+region = Rect2(0, 0, 15, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_501ro"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_501ro")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mg8as"]
+size = Vector2(28, 31)
+
+[node name="Trashcan" type="Node2D"]
+script = ExtResource("1_1btkc")
+sorting_game_scene = ExtResource("2_501ro")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_501ro")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_mg8as")
