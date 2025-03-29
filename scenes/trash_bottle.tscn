@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://bc3ry2fy1y4ro"]
+[gd_scene load_steps=7 format=3 uid="uid://bc3ry2fy1y4ro"]
 
 [ext_resource type="Script" uid="uid://bvtj4gh1tuh7a" path="res://scripts/trash_bottle.gd" id="1_p56qe"]
-[ext_resource type="Texture2D" uid="uid://8oeytbygxcb" path="res://assets/water_bottle.png" id="2_p56qe"]
+[ext_resource type="Resource" uid="uid://cpalivb63qh2m" path="res://inventory/items/bottle.tres" id="2_ort2k"]
+[ext_resource type="Texture2D" uid="uid://8oeytbygxcb" path="res://assets/trash/water_bottle.png" id="2_p56qe"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ort2k"]
 atlas = ExtResource("2_p56qe")
@@ -23,6 +24,7 @@ radius = 63.5472
 
 [node name="Trash Bottle" type="Node2D"]
 script = ExtResource("1_p56qe")
+item = ExtResource("2_ort2k")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_w6jqc")

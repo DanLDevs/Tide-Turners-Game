@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://fukwqmlpbeck"
-path="res://.godot/imported/Stardew Valley - Harvested Crops Seed Packets Minerals Food Equipment & Misc Objects.png-3bd3c9ff083355b3a845869ed36c2614.ctex"
+uid="uid://8oeytbygxcb"
+path="res://.godot/imported/water_bottle.png-88db66e804caa931e76c05bfdc7d8a91.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Stardew Valley - Harvested Crops Seed Packets Minerals Food Equipment & Misc Objects.png"
-dest_files=["res://.godot/imported/Stardew Valley - Harvested Crops Seed Packets Minerals Food Equipment & Misc Objects.png-3bd3c9ff083355b3a845869ed36c2614.ctex"]
+source_file="res://assets/trash/water_bottle.png"
+dest_files=["res://.godot/imported/water_bottle.png-88db66e804caa931e76c05bfdc7d8a91.ctex"]
 
 [params]
 

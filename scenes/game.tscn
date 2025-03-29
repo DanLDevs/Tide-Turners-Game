@@ -1,10 +1,10 @@
 [gd_scene load_steps=19 format=3 uid="uid://d0b6vb7lino2w"]
 
 [ext_resource type="PackedScene" uid="uid://bg48kq10cw4a2" path="res://scenes/player.tscn" id="1_uwrxv"]
-[ext_resource type="Texture2D" uid="uid://dk0eun8qa1orc" path="res://assets/Beach Spring.png" id="2_yqjtg"]
-[ext_resource type="Texture2D" uid="uid://8if40bpyyruw" path="res://assets/Island Spring.png" id="3_lnu2h"]
+[ext_resource type="Texture2D" uid="uid://dk0eun8qa1orc" path="res://assets/map/Beach Spring.png" id="2_yqjtg"]
+[ext_resource type="Texture2D" uid="uid://8if40bpyyruw" path="res://assets/map/Island Spring.png" id="3_lnu2h"]
 [ext_resource type="PackedScene" uid="uid://dhhecpycdyk4w" path="res://scenes/trashcan.tscn" id="4_lbhrr"]
-[ext_resource type="Texture2D" uid="uid://dd5agvnnmq53y" path="res://assets/Beachmap .png" id="4_u5sy4"]
+[ext_resource type="Texture2D" uid="uid://dd5agvnnmq53y" path="res://assets/map/Beachmap .png" id="4_u5sy4"]
 [ext_resource type="PackedScene" uid="uid://bc3ry2fy1y4ro" path="res://scenes/trash_bottle.tscn" id="5_iywne"]
 [ext_resource type="PackedScene" uid="uid://ca60n7wnrhl7f" path="res://scenes/recycling_bin.tscn" id="6_0tnpc"]
 [ext_resource type="PackedScene" uid="uid://dpw48lsuuj4cb" path="res://scenes/trash_banana.tscn" id="6_p57ef"]

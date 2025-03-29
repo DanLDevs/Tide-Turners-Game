@@ -5,17 +5,17 @@
 [ext_resource type="PackedScene" uid="uid://b2fxnsv5cfdfj" path="res://inventory/inv_ui_slot.tscn" id="3_dn3an"]
 
 [node name="Inv_UI" type="Control"]
-custom_minimum_size = Vector2(102, 45)
+custom_minimum_size = Vector2(116, 55)
 layout_mode = 3
 anchors_preset = 0
-offset_right = 102.0
-offset_bottom = 45.0
+offset_right = 116.0
+offset_bottom = 55.0
 script = ExtResource("1_f2u1w")
 
 [node name="NinePatchRect" type="NinePatchRect" parent="."]
 layout_mode = 0
-offset_right = 102.0
-offset_bottom = 45.0
+offset_right = 111.0
+offset_bottom = 53.0
 texture = ExtResource("2_w82yi")
 patch_margin_left = 6
 patch_margin_top = 6

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://8oeytbygxcb"
-path="res://.godot/imported/water_bottle.png-3613dbd034b4c252730eff2937aafb8a.ctex"
+uid="uid://8if40bpyyruw"
+path="res://.godot/imported/Island Spring.png-66f6a59009696f5a7daa8aba4cd22d11.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/water_bottle.png"
-dest_files=["res://.godot/imported/water_bottle.png-3613dbd034b4c252730eff2937aafb8a.ctex"]
+source_file="res://assets/map/Island Spring.png"
+dest_files=["res://.godot/imported/Island Spring.png-66f6a59009696f5a7daa8aba4cd22d11.ctex"]
 
 [params]
 

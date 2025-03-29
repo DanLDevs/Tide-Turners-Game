@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://xbqx5dyhhvdf"
-path="res://.godot/imported/Stardew Valley - Craftables.png-d826a885055f9b936fe6607e5cacd7dd.ctex"
+uid="uid://ctixaajinwr60"
+path="res://.godot/imported/small_water_bottle.png-a327c2aa193daf51afe2a2016a34596e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Stardew Valley - Craftables.png"
-dest_files=["res://.godot/imported/Stardew Valley - Craftables.png-d826a885055f9b936fe6607e5cacd7dd.ctex"]
+source_file="res://assets/trash/resized trash/small_water_bottle.png"
+dest_files=["res://.godot/imported/small_water_bottle.png-a327c2aa193daf51afe2a2016a34596e.ctex"]
 
 [params]
 

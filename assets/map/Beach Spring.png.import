@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dd5agvnnmq53y"
-path="res://.godot/imported/Beachmap .png-b96b3d22ffcb3ca06470179337ef197d.ctex"
+uid="uid://dk0eun8qa1orc"
+path="res://.godot/imported/Beach Spring.png-9b265fbb37b110b259ca5d95a493682f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Beachmap .png"
-dest_files=["res://.godot/imported/Beachmap .png-b96b3d22ffcb3ca06470179337ef197d.ctex"]
+source_file="res://assets/map/Beach Spring.png"
+dest_files=["res://.godot/imported/Beach Spring.png-9b265fbb37b110b259ca5d95a493682f.ctex"]
 
 [params]
 

@@ -1,11 +1,11 @@
 [gd_scene load_steps=18 format=3 uid="uid://bevpitnxncxhj"]
 
-[ext_resource type="Script" uid="uid://cc18snrytijqp" path="res://scripts/sorting_game.gd" id="1_ic3yc"]
-[ext_resource type="Texture2D" uid="uid://cdyw3qt00qnee" path="res://assets/Stardew Valley - Mail.png" id="1_orgad"]
+[ext_resource type="Script" path="res://scripts/sorting_game.gd" id="1_ic3yc"]
+[ext_resource type="Texture2D" path="res://assets/Stardew Valley - Mail.png" id="1_orgad"]
 [ext_resource type="Texture2D" uid="uid://bnko2r3jd4r5g" path="res://assets/bins.png" id="2_a8bwk"]
-[ext_resource type="Texture2D" uid="uid://8oeytbygxcb" path="res://assets/water_bottle.png" id="2_m4bsx"]
-[ext_resource type="Texture2D" uid="uid://n6ocd7fy4o5t" path="res://assets/banana.png" id="3_2oej7"]
-[ext_resource type="Texture2D" uid="uid://cvnpw8r6lle27" path="res://assets/paper.png" id="4_i5u05"]
+[ext_resource type="Texture2D" uid="uid://8oeytbygxcb" path="res://assets/trash/water_bottle.png" id="2_m4bsx"]
+[ext_resource type="Texture2D" uid="uid://n6ocd7fy4o5t" path="res://assets/trash/banana.png" id="3_2oej7"]
+[ext_resource type="Texture2D" uid="uid://cvnpw8r6lle27" path="res://assets/trash/paper.png" id="4_i5u05"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2oej7"]
 atlas = ExtResource("1_orgad")
