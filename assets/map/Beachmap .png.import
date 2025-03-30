@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://8if40bpyyruw"
-path="res://.godot/imported/Island Spring.png-4b9631f317df8ea03dd9796bf18bbcac.ctex"
+uid="uid://dd5agvnnmq53y"
+path="res://.godot/imported/Beachmap .png-29827a7690635920e39bbea5446e58ce.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Island Spring.png"
-dest_files=["res://.godot/imported/Island Spring.png-4b9631f317df8ea03dd9796bf18bbcac.ctex"]
+source_file="res://assets/map/Beachmap .png"
+dest_files=["res://.godot/imported/Beachmap .png-29827a7690635920e39bbea5446e58ce.ctex"]
 
 [params]
 

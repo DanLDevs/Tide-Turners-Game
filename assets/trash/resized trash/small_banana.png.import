@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cdyw3qt00qnee"
-path="res://.godot/imported/Stardew Valley - Mail.png-add15371f65018fc44fb5640dcf943c9.ctex"
+uid="uid://cyj0c63dyrjpk"
+path="res://.godot/imported/small_banana.png-b56edd6186c93fdeee8720550e25534d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Stardew Valley - Mail.png"
-dest_files=["res://.godot/imported/Stardew Valley - Mail.png-add15371f65018fc44fb5640dcf943c9.ctex"]
+source_file="res://assets/trash/resized trash/small_banana.png"
+dest_files=["res://.godot/imported/small_banana.png-b56edd6186c93fdeee8720550e25534d.ctex"]
 
 [params]
 

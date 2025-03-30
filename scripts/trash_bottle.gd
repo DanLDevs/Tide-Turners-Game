@@ -1,15 +1,29 @@
-extends Area2D
+extends Node2D
 
-signal trash_collected(trash_type)
+var state = "bottle" # no bottle, bottle
+var player_in_area = false
 
-@export var trash_type: String = "bottle" # Change per trash type (e.g., "paper", "bottle")
+@export var item: InvItem
+var player = null
 
-func _ready():
-	# Add to the trash group
-	add_to_group("trash")
-	print("Trash item initialized and added to trash group:", self.name)
+func _process(delta: float) -> void:
+	if state == "no bottle":
+		$AnimatedSprite2D.visible = false
+	if state == "bottle":
+		$AnimatedSprite2D.visible = true   # Show the sprite
+		$AnimatedSprite2D.play("bottle")
+		if player_in_area and Input.is_action_just_pressed("e"):
+			print("+1 Bottle")
+			player.collect(item)
+			state = "no bottle"
+			queue_free()
 
-func _on_body_entered(body: Node2D) -> void:
-	if body.is_in_group("player"): # Ensure it's the player
-		emit_signal("trash_collected", trash_type) # Emit signal when collected
-		queue_free() # Remove the trash from the map
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	if body.has_method("player"):
+		player_in_area = true
+		player = body
+
+func _on_area_2d_body_exited(body: Node2D) -> void:
+	if body.has_method("player"):
+		player_in_area = false
+		

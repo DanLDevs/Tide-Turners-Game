@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://cvnw0fkki3cq5"]
+[gd_scene load_steps=7 format=3 uid="uid://cvnw0fkki3cq5"]
 
 [ext_resource type="Script" uid="uid://drxxoix8ha2t7" path="res://scripts/trash_paper.gd" id="1_sid3h"]
-[ext_resource type="Texture2D" uid="uid://cvnpw8r6lle27" path="res://assets/paper.png" id="1_xcxeu"]
+[ext_resource type="Texture2D" uid="uid://cvnpw8r6lle27" path="res://assets/trash/paper.png" id="1_xcxeu"]
+[ext_resource type="Resource" uid="uid://dnehkqtnuorpu" path="res://inventory/items/paper.tres" id="2_r36sr"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_sid3h"]
 atlas = ExtResource("1_xcxeu")
@@ -19,17 +20,20 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_qtdqq"]
-radius = 27.074
+radius = 61.0328
 
-[node name="Trash Paper" type="Area2D"]
-collision_mask = 2
+[node name="Trash Paper" type="Node2D"]
 script = ExtResource("1_sid3h")
+item = ExtResource("2_r36sr")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_r36sr")
 animation = &"paper"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CircleShape2D_qtdqq")
 
-[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
