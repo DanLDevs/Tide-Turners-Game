@@ -1,10 +1,10 @@
-[gd_resource type="Resource" script_class="InvItem" load_steps=3 format=3 uid="uid://cpalivb63qh2m"]
+[gd_resource type="Resource" script_class="InventoryItem" load_steps=3 format=3 uid="uid://dixt45tl22vv1"]
 
-[ext_resource type="Script" uid="uid://ckoq47mt5t1tm" path="res://inventory/inventory_item.gd" id="1_bfv5h"]
-[ext_resource type="Texture2D" uid="uid://ctixaajinwr60" path="res://assets/trash/resized trash/small_water_bottle.png" id="2_3pur4"]
+[ext_resource type="Script" uid="uid://dwfgb68ckx2w" path="res://inventory/inventoryItem.gd" id="1_2a7sb"]
+[ext_resource type="Texture2D" uid="uid://8oeytbygxcb" path="res://assets/trash/water_bottle.png" id="2_0nmfo"]
 
 [resource]
-script = ExtResource("1_bfv5h")
-name = "bottle"
-texture = ExtResource("2_3pur4")
-metadata/_custom_type_script = "uid://ckoq47mt5t1tm"
+script = ExtResource("1_2a7sb")
+name = "Bottle"
+texture = ExtResource("2_0nmfo")
+metadata/_custom_type_script = "uid://dwfgb68ckx2w"

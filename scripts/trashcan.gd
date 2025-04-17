@@ -10,3 +10,7 @@ func _on_body_entered(body):
 			print("Trash correctly sorted into trash bin!")
 		else:
 			print("Incorrect sorting!") # Provide feedback for incorrect sorting
+
+
+func _on_inventory_gui_closed() -> void:
+	pass # Replace with function body.

@@ -5,7 +5,7 @@ const GRAVITY = -600.0 # Simulated gravity pulling the player down
 
 @onready var animated_sprite = $AnimatedSprite2D
 
-@export var inv: Inv
+@export var inventory: Inventory
 
 var last_direction = "idle_down"  # Default idle direction
 
@@ -47,6 +47,3 @@ func _physics_process(delta: float) -> void:
 	
 func player():
 	pass
-
-func collect(item):
-	inv.insert(item)

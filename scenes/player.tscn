@@ -1,9 +1,8 @@
-[gd_scene load_steps=19 format=3 uid="uid://bg48kq10cw4a2"]
+[gd_scene load_steps=18 format=3 uid="uid://bg48kq10cw4a2"]
 
 [ext_resource type="Script" uid="uid://cmavrsln4hjut" path="res://scripts/player.gd" id="1_g2els"]
-[ext_resource type="Resource" uid="uid://buvrjaru35dyx" path="res://inventory/playerinv.tres" id="2_dqkch"]
 [ext_resource type="Texture2D" uid="uid://dwjk3e5nyh68s" path="res://assets/Omori - Basil Dream.png" id="2_g2els"]
-[ext_resource type="PackedScene" uid="uid://bvhymr26wfot0" path="res://inventory/inv_ui.tscn" id="4_qlg0r"]
+[ext_resource type="Resource" uid="uid://ctjw578w5n5el" path="res://inventory/playerInventory.tres" id="2_qhqgy"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qhqgy"]
 atlas = ExtResource("2_g2els")
@@ -137,7 +136,7 @@ radius = 4.54003
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_g2els")
-inv = ExtResource("2_dqkch")
+inventory = ExtResource("2_qhqgy")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -16)
@@ -149,12 +148,6 @@ position = Vector2(0, -7)
 rotation = -3.14159
 scale = Vector2(1.12727, -1.03237)
 shape = SubResource("CircleShape2D_dqkch")
-
-[node name="Inv_UI" parent="." instance=ExtResource("4_qlg0r")]
-offset_left = -51.0
-offset_top = -79.0
-offset_right = 51.0
-offset_bottom = -34.0
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(2.5, 2.5)

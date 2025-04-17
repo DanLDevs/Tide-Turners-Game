@@ -1,10 +1,10 @@
-[gd_resource type="Resource" script_class="InvItem" load_steps=3 format=3 uid="uid://dnehkqtnuorpu"]
+[gd_resource type="Resource" script_class="InventoryItem" load_steps=3 format=3 uid="uid://b8qnhimqciyg1"]
 
-[ext_resource type="Script" uid="uid://ckoq47mt5t1tm" path="res://inventory/inventory_item.gd" id="1_3x840"]
-[ext_resource type="Texture2D" uid="uid://cvnpw8r6lle27" path="res://assets/trash/paper.png" id="2_3x840"]
+[ext_resource type="Script" uid="uid://dwfgb68ckx2w" path="res://inventory/inventoryItem.gd" id="1_3x840"]
+[ext_resource type="Texture2D" uid="uid://cvnpw8r6lle27" path="res://assets/trash/paper.png" id="2_kdnq5"]
 
 [resource]
 script = ExtResource("1_3x840")
-name = "paper"
-texture = ExtResource("2_3x840")
-metadata/_custom_type_script = "uid://ckoq47mt5t1tm"
+name = "Paper"
+texture = ExtResource("2_kdnq5")
+metadata/_custom_type_script = "uid://dwfgb68ckx2w"
