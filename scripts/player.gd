@@ -49,7 +49,7 @@ func _physics_process(delta: float) -> void:
 		
 func _on_hurt_box_area_entered(area):
 	if area.has_method("collect"):
-		area.collect()
+		area.collect(inventory)
 
 func player():
 	pass
