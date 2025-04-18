@@ -3,6 +3,10 @@
 [ext_resource type="Texture2D" uid="uid://n6ocd7fy4o5t" path="res://assets/trash/banana.png" id="1_fxpo0"]
 [ext_resource type="Script" uid="uid://dr2gye0kp5myp" path="res://scripts/trash_banana.gd" id="1_u5ug7"]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_6h25a"]
+resource_local_to_scene = true
+radius = 49.5227
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_u5ug7"]
 atlas = ExtResource("1_fxpo0")
 region = Rect2(0, 0, 64, 64)
@@ -18,22 +22,14 @@ animations = [{
 "speed": 0.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_6h25a"]
-radius = 49.5227
-
-[node name="Trash Banana" type="Node2D"]
+[node name="Trash Banana" type="Area2D"]
 z_index = 2
 script = ExtResource("1_u5ug7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 0.5)
+shape = SubResource("CircleShape2D_6h25a")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_ebm1x")
 animation = &"banana"
-
-[node name="Area2D" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(-0.5, 0.5)
-shape = SubResource("CircleShape2D_6h25a")
-
-[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
-[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

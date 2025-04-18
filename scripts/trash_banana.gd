@@ -3,6 +3,8 @@ extends Node2D
 var state = "banana" # no banana, banana
 var player_in_area = false
 
+@export var itemsRes: InventoryItem
+
 #@export var item: InvItem
 var player = null
 

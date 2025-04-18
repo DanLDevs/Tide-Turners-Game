@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://bg48kq10cw4a2"]
+[gd_scene load_steps=19 format=3 uid="uid://bg48kq10cw4a2"]
 
 [ext_resource type="Script" uid="uid://cmavrsln4hjut" path="res://scripts/player.gd" id="1_g2els"]
 [ext_resource type="Texture2D" uid="uid://dwjk3e5nyh68s" path="res://assets/Omori - Basil Dream.png" id="2_g2els"]
@@ -131,8 +131,13 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_dqkch"]
-radius = 4.54003
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qhqgy"]
+radius = 5.3226
+height = 21.3102
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dqkch"]
+radius = 6.0
+height = 26.0
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_g2els")
@@ -144,10 +149,10 @@ sprite_frames = SubResource("SpriteFrames_qhqgy")
 animation = &"idle_down"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -7)
+position = Vector2(-3.63798e-12, -18)
 rotation = -3.14159
 scale = Vector2(1.12727, -1.03237)
-shape = SubResource("CircleShape2D_dqkch")
+shape = SubResource("CapsuleShape2D_qhqgy")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(2.5, 2.5)
@@ -156,3 +161,11 @@ limit_top = -974
 limit_right = 1783
 limit_bottom = 268
 position_smoothing_enabled = true
+
+[node name="hurtBox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hurtBox"]
+position = Vector2(0, -16)
+shape = SubResource("CapsuleShape2D_dqkch")
+
+[connection signal="area_entered" from="hurtBox" to="." method="_on_hurt_box_area_entered"]
