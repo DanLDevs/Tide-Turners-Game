@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://cii01ptftei1v"]
+
+[ext_resource type="PackedScene" uid="uid://bic58mrr22i5r" path="res://scenes/collectables/collectable.tscn" id="1_w7l7y"]
+[ext_resource type="Texture2D" uid="uid://cvnpw8r6lle27" path="res://assets/trash/paper.png" id="2_alj8r"]
+[ext_resource type="Resource" uid="uid://b8qnhimqciyg1" path="res://inventory/items/paper.tres" id="2_gg6b4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gg6b4"]
+resource_local_to_scene = true
+size = Vector2(28, 23)
+
+[node name="Collectable" instance=ExtResource("1_w7l7y")]
+itemRes = ExtResource("2_gg6b4")
+
+[node name="CollisionShape2D" parent="." index="0"]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_gg6b4")
+
+[node name="Sprite2D" parent="." index="1"]
+position = Vector2(-9.53674e-07, 9.53674e-07)
+scale = Vector2(0.578125, 0.578125)
+texture = ExtResource("2_alj8r")

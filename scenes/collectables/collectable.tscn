@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://bic58mrr22i5r"]
+
+[ext_resource type="Script" uid="uid://dd4qt75gxutoi" path="res://scripts/collectable.gd" id="1_6cysq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_llqga"]
+resource_local_to_scene = true
+
+[node name="Collectable" type="Area2D"]
+script = ExtResource("1_6cysq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_llqga")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]

@@ -4,14 +4,16 @@ const SPEED = 130.0
 const GRAVITY = -600.0 # Simulated gravity pulling the player down
 
 @onready var animated_sprite = $AnimatedSprite2D
+@onready var hurtBox = $hurtBox
 
-@export var inv: Inv
+@export var inventory: Inventory
 
 var last_direction = "idle_down"  # Default idle direction
 
 # Add a variable to track if the player is near trash/recycling bins
 var near_bin = null
 var current_trash_type = null # Track what trash is currently selected in inventory
+var isHurt: bool = false
 
 func _physics_process(delta: float) -> void:
 	# Get movement input
@@ -24,7 +26,7 @@ func _physics_process(delta: float) -> void:
 	# Move the player
 	velocity = direction * SPEED
 	move_and_slide()
-
+	
 	if direction == Vector2.ZERO:
 		# If player is not moving, switch to idle animation based on last direction
 		animated_sprite.play(last_direction)
@@ -44,9 +46,10 @@ func _physics_process(delta: float) -> void:
 			else:
 				animated_sprite.play("walk_up")
 				last_direction = "idle_up"
-	
+		
+func _on_hurt_box_area_entered(area):
+	if area.has_method("collect"):
+		area.collect(inventory)
+
 func player():
 	pass
-
-func collect(item):
-	inv.insert(item)

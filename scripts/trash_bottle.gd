@@ -3,7 +3,7 @@ extends Node2D
 var state = "bottle" # no bottle, bottle
 var player_in_area = false
 
-@export var item: InvItem
+#@export var item: InvItem
 var player = null
 
 func _process(delta: float) -> void:
@@ -14,7 +14,7 @@ func _process(delta: float) -> void:
 		$AnimatedSprite2D.play("bottle")
 		if player_in_area and Input.is_action_just_pressed("e"):
 			print("+1 Bottle")
-			player.collect(item)
+			#player.collect(item)
 			state = "no bottle"
 			queue_free()
 

@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=3 uid="uid://bdspwbbiy2qqi"]
+
+[ext_resource type="PackedScene" uid="uid://bic58mrr22i5r" path="res://scenes/collectables/collectable.tscn" id="1_brbde"]
+[ext_resource type="Texture2D" uid="uid://8oeytbygxcb" path="res://assets/trash/water_bottle.png" id="2_jnwud"]
+[ext_resource type="Resource" uid="uid://dixt45tl22vv1" path="res://inventory/items/bottle.tres" id="2_qc1hv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_137t8"]
+resource_local_to_scene = true
+size = Vector2(28, 28)
+
+[node name="Bottle" instance=ExtResource("1_brbde")]
+itemRes = ExtResource("2_qc1hv")
+
+[node name="CollisionShape2D" parent="." index="0"]
+shape = SubResource("RectangleShape2D_137t8")
+
+[node name="Sprite2D" parent="." index="1"]
+scale = Vector2(0.53125, 0.53125)
+texture = ExtResource("2_jnwud")

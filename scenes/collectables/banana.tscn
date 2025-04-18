@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://dbodiaw5tan7s"]
+
+[ext_resource type="PackedScene" uid="uid://bic58mrr22i5r" path="res://scenes/collectables/collectable.tscn" id="1_h3vy6"]
+[ext_resource type="Resource" uid="uid://cpfusi4dq40wd" path="res://inventory/items/banana.tres" id="2_k0te4"]
+[ext_resource type="Texture2D" uid="uid://n6ocd7fy4o5t" path="res://assets/trash/banana.png" id="2_uc2bj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a45fu"]
+resource_local_to_scene = true
+size = Vector2(23, 16)
+
+[node name="Collectable" instance=ExtResource("1_h3vy6")]
+itemRes = ExtResource("2_k0te4")
+
+[node name="CollisionShape2D" parent="." index="0"]
+position = Vector2(-0.5, 1)
+shape = SubResource("RectangleShape2D_a45fu")
+
+[node name="Sprite2D" parent="." index="1"]
+scale = Vector2(0.59375, 0.59375)
+texture = ExtResource("2_uc2bj")
