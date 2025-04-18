@@ -1,18 +1,18 @@
 [gd_scene load_steps=3 format=3 uid="uid://bh8tpvaljr3u6"]
 
-[ext_resource type="Script" uid="uid://dqfw4ajtml7ge" path="res://scripts/hotbar.gd" id="1_4qkdb"]
-[ext_resource type="PackedScene" uid="uid://c58owmii77pq5" path="res://scenes/hotbar_slot.tscn" id="2_xrqkv"]
+[ext_resource type="Script" uid="uid://wi1a6kat5osc" path="res://scripts/hotbar.gd" id="1_4qkdb"]
+[ext_resource type="PackedScene" uid="uid://d1r0e4qdih6i5" path="res://scenes/hotbar_slot.tscn" id="2_xrqkv"]
 
 [node name="Hotbar" type="HBoxContainer"]
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("1_4qkdb")
 
-[node name="HotBar" parent="." instance=ExtResource("2_xrqkv")]
+[node name="Slot" parent="." instance=ExtResource("2_xrqkv")]
 layout_mode = 2
 
-[node name="HotBar2" parent="." instance=ExtResource("2_xrqkv")]
+[node name="Slot2" parent="." instance=ExtResource("2_xrqkv")]
 layout_mode = 2
 
-[node name="HotBar3" parent="." instance=ExtResource("2_xrqkv")]
+[node name="Slot3" parent="." instance=ExtResource("2_xrqkv")]
 layout_mode = 2
