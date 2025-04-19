@@ -19,9 +19,9 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t5sml"]
-size = Vector2(184, 218)
+size = Vector2(482, 466)
 
-[node name="Area2D" type="Area2D"]
+[node name="Area2D" type="Area2D" groups=["bin"]]
 script = ExtResource("1_tlfpw")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

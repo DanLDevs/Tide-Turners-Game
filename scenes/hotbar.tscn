@@ -12,6 +12,7 @@ offset_bottom = 62.0
 script = ExtResource("1_4qkdb")
 
 [node name="Container" type="HBoxContainer" parent="."]
+layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 

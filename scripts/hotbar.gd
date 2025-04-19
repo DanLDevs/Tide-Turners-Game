@@ -5,6 +5,7 @@ extends Panel
 @onready var selector: Sprite2D = $Selector
 
 var currently_selected: int = 0
+var near_bin: Area2D = null # For trash/recycling
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -22,7 +23,12 @@ func move_selector() -> void:
 
 func _unhandled_input(event) -> void:
 	if event.is_action_pressed("use_item"):
-		inventory.use_item_at_index(currently_selected)
-		
+		#inventory.use_item_at_index(currently_selected)
+		var item = inventory.slots[currently_selected].item
+		if item and near_bin and item.trash_type == near_bin.bin_type:
+			inventory.use_item_at_index(currently_selected)
+			print("Correctly disposed:", item.name)		
+		else:
+			print("You must be near the correct bin to use this item.")
 	if event.is_action_pressed("move_selector"):
 		move_selector()

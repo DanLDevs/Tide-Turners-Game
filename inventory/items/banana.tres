@@ -7,4 +7,5 @@
 script = ExtResource("1_qn7s1")
 name = "Banana"
 texture = ExtResource("2_nmwps")
+trash_type = "trash"
 metadata/_custom_type_script = "uid://dwfgb68ckx2w"

@@ -19,9 +19,9 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7au10"]
-size = Vector2(19, 27)
+size = Vector2(67, 69)
 
-[node name="Area2D" type="Area2D"]
+[node name="Area2D" type="Area2D" groups=["bin"]]
 script = ExtResource("1_1btkc")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
