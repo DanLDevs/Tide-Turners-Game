@@ -6,7 +6,18 @@ signal updated
 
 @export var slots: Array[InventorySlot]
 
-func insert(item: InventoryItem):
+func insert(item: InventoryItem) -> bool:
+	var total_of_type = 0
+	for slot in slots:
+		if slot.item == item:
+			total_of_type += slot.amount
+			
+	# If 5 or more, don't allow inserting
+	if total_of_type >= 5:
+		print("You can't carry more than 5 of this item.")
+		return false
+		
+	# Proceed with original stacking logic
 	var itemSlots = slots.filter(func(slot): return slot.item == item)
 	if !itemSlots.is_empty():
 		itemSlots[0].amount += 1
@@ -17,6 +28,7 @@ func insert(item: InventoryItem):
 			emptySlots[0].amount = 1
 			
 	updated.emit()
+	return true
 	
 	#for slot in slots:
 		#if slot.item == item:
