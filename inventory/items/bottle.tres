@@ -7,4 +7,5 @@
 script = ExtResource("1_2a7sb")
 name = "Bottle"
 texture = ExtResource("2_0nmfo")
+trash_type = "recycling"
 metadata/_custom_type_script = "uid://dwfgb68ckx2w"

@@ -5,6 +5,7 @@ const GRAVITY = -600.0 # Simulated gravity pulling the player down
 
 @onready var animated_sprite = $AnimatedSprite2D
 @onready var hurtBox = $hurtBox
+@onready var hotbar = $"../CanvasLayer/Hotbar"
 
 @export var inventory: Inventory
 
@@ -12,7 +13,8 @@ var last_direction = "idle_down"  # Default idle direction
 
 # Add a variable to track if the player is near trash/recycling bins
 var near_bin = null
-var current_trash_type = null # Track what trash is currently selected in inventory
+#var current_trash_type = null # Track what trash is currently selected in inventory
+
 var isHurt: bool = false
 
 func _physics_process(delta: float) -> void:
@@ -46,6 +48,16 @@ func _physics_process(delta: float) -> void:
 			else:
 				animated_sprite.play("walk_up")
 				last_direction = "idle_up"
+		
+func _on_bin_area_entered(area):
+	if area.is_in_group("bin"):
+		hotbar.near_bin = area
+		print("Entered", area.bin_type)
+		
+func _on_bin_area_exited(area):
+	if area == near_bin:
+		hotbar.near_bin = null
+		print("Exited bin area")
 		
 func _on_hurt_box_area_entered(area):
 	if area.has_method("collect"):
