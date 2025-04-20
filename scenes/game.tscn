@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://d0b6vb7lino2w"]
+[gd_scene load_steps=31 format=3 uid="uid://d0b6vb7lino2w"]
 
 [ext_resource type="Script" uid="uid://ryxvi7w74tc7" path="res://scripts/game.gd" id="1_dinhu"]
 [ext_resource type="PackedScene" uid="uid://bg48kq10cw4a2" path="res://scenes/player.tscn" id="1_uwrxv"]
@@ -16,6 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://cskbt43vh4ujv" path="res://scenes/inventory_gui.tscn" id="10_vtaks"]
 [ext_resource type="PackedScene" uid="uid://bh8tpvaljr3u6" path="res://scenes/hotbar.tscn" id="15_ir15t"]
 [ext_resource type="PackedScene" uid="uid://ctdl26oirf8oq" path="res://scenes/score_gui.tscn" id="16_ca42v"]
+[ext_resource type="PackedScene" uid="uid://dpo0gu1celqdd" path="res://scenes/feedback_gui.tscn" id="17_rysoc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lnu2h"]
 texture = ExtResource("2_yqjtg")
@@ -3334,10 +3335,14 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="ScoreGui" parent="CanvasLayer" instance=ExtResource("16_ca42v")]
-offset_left = 993.0
-offset_top = 1.0
-offset_right = 1147.0
-offset_bottom = 46.0
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -154.0
+offset_right = 0.0
+grow_horizontal = 0
+
+[node name="FeedbackGui" parent="CanvasLayer" instance=ExtResource("17_rysoc")]
 
 [connection signal="closed" from="CanvasLayer/InventoryGui" to="." method="_on_inventory_gui_closed"]
 [connection signal="opened" from="CanvasLayer/InventoryGui" to="." method="_on_inventory_gui_opened"]
