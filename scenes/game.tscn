@@ -3307,19 +3307,6 @@ scale = Vector2(0.22, 0.22)
 process_mode = 3
 script = ExtResource("10_kvpfn")
 
-[node name="InventoryGui" parent="CanvasLayer" instance=ExtResource("10_vtaks")]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -51.5
-offset_top = -27.0
-offset_right = 51.5
-offset_bottom = 27.0
-grow_horizontal = 2
-grow_vertical = 2
-
 [node name="Hotbar" parent="CanvasLayer" instance=ExtResource("15_ir15t")]
 anchors_preset = 7
 anchor_left = 0.5
@@ -3333,15 +3320,24 @@ offset_bottom = -6.0
 grow_horizontal = 2
 grow_vertical = 0
 
+[node name="InventoryGui" parent="CanvasLayer" instance=ExtResource("10_vtaks")]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -102.5
+offset_top = -50.0
+offset_right = 102.5
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+
 [node name="ScoreGui" parent="CanvasLayer" instance=ExtResource("16_ca42v")]
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -106.0
+offset_left = 993.0
 offset_top = 1.0
-offset_right = -2.0
+offset_right = 1147.0
 offset_bottom = 46.0
-grow_horizontal = 0
 
 [connection signal="closed" from="CanvasLayer/InventoryGui" to="." method="_on_inventory_gui_closed"]
 [connection signal="opened" from="CanvasLayer/InventoryGui" to="." method="_on_inventory_gui_opened"]

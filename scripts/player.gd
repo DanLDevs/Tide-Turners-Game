@@ -6,6 +6,7 @@ const GRAVITY = -600.0 # Simulated gravity pulling the player down
 @onready var animated_sprite = $AnimatedSprite2D
 @onready var hurtBox = $hurtBox
 @onready var hotbar = $"../CanvasLayer/Hotbar"
+@onready var score_gui = $"../CanvasLayer/ScoreGui"
 
 @export var inventory: Inventory
 
@@ -61,7 +62,7 @@ func _on_bin_area_exited(area):
 		
 func _on_hurt_box_area_entered(area):
 	if area.has_method("collect"):
-		area.collect(inventory)
+		area.collect(inventory, score_gui)
 
 func player():
 	pass
