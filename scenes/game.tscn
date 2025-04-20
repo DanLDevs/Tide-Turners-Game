@@ -3338,8 +3338,8 @@ grow_vertical = 2
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -154.0
-offset_right = 0.0
+offset_left = -230.0
+offset_right = -76.0
 grow_horizontal = 0
 
 [node name="FeedbackGui" parent="CanvasLayer" instance=ExtResource("17_rysoc")]

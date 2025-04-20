@@ -5,10 +5,12 @@
 [ext_resource type="LabelSettings" uid="uid://bbvu8pxj0ld6b" path="res://assets/score_gui.tres" id="2_p0nkg"]
 
 [node name="ScoreGui" type="Control"]
+custom_minimum_size = Vector2(154, 45)
 layout_mode = 3
 anchors_preset = 0
 offset_right = 154.0
 offset_bottom = 45.0
+scale = Vector2(1.5, 1.5)
 script = ExtResource("1_kuyeq")
 
 [node name="Background" type="NinePatchRect" parent="."]
