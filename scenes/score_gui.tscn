@@ -1,0 +1,46 @@
+[gd_scene load_steps=4 format=3 uid="uid://ctdl26oirf8oq"]
+
+[ext_resource type="Script" uid="uid://d0eaalf4mco3n" path="res://scripts/score_gui.gd" id="1_kuyeq"]
+[ext_resource type="Texture2D" uid="uid://j8n8g6vqbsw6" path="res://assets/time_gui.png" id="1_p0nkg"]
+[ext_resource type="LabelSettings" uid="uid://bbvu8pxj0ld6b" path="res://assets/score_gui.tres" id="2_p0nkg"]
+
+[node name="ScoreGui" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 104.0
+offset_bottom = 45.0
+script = ExtResource("1_kuyeq")
+
+[node name="Background" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_right = 104.0
+offset_bottom = 45.0
+texture = ExtResource("1_p0nkg")
+region_rect = Rect2(0, 0, 16, 16)
+patch_margin_left = 7
+patch_margin_top = 7
+patch_margin_right = 7
+patch_margin_bottom = 7
+
+[node name="Score" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -49.0
+offset_top = -19.5
+offset_right = 47.0
+offset_bottom = 16.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Score"]
+layout_mode = 0
+offset_right = 96.0
+offset_bottom = 38.0
+text = "+9999"
+label_settings = ExtResource("2_p0nkg")
+horizontal_alignment = 1
+vertical_alignment = 1
