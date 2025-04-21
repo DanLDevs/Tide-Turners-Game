@@ -32,16 +32,21 @@ func move_selector() -> void:
 			break
 	if found:
 		selector.global_position = slots[currently_selected].global_position
+		selector.visible = true
 	else:
 		# If no slot with item is found, revert to original position
 		currently_selected = original_index
+		selector.visible = false
 
 func position_selector_on_first_item() -> void:
 	for i in range(slots.size()):
 		if inventory.slots[i].item != null:
 			currently_selected = i
 			selector.global_position = slots[i].global_position
+			selector.visible = true
 			return
+	# If no items are found, hide the selector
+	selector.visible = false
 
 func _unhandled_input(event) -> void:
 	if event.is_action_pressed("use_item"):
