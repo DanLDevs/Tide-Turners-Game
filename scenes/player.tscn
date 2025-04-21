@@ -168,6 +168,6 @@ position_smoothing_enabled = true
 position = Vector2(0, -16)
 shape = SubResource("CapsuleShape2D_dqkch")
 
-[connection signal="area_entered" from="hurtBox" to="." method="_on_bin_area_entered"]
 [connection signal="area_entered" from="hurtBox" to="." method="_on_hurt_box_area_entered"]
+[connection signal="area_entered" from="hurtBox" to="." method="_on_bin_area_entered"]
 [connection signal="area_exited" from="hurtBox" to="." method="_on_bin_area_exited"]
