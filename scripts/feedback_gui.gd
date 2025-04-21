@@ -6,7 +6,10 @@ var current_points: int = 0 # Track the current points for feedback
 
 func _ready():
 	self.visible = false
-	print("Feedback GUI initialized.")
+	#print("Feedback GUI initialized.")
+	var player = get_node("../../Player")
+	var inventory = player.inventory
+	inventory.inventory_full.connect(_on_inventory_full)
 
 func show_feedback(custom_message: String = ""):
 	# Use custom message if provided; otherwise, build a default message
@@ -34,3 +37,7 @@ func _on_tween_complete():
 	#print("Tween complete, resetting points") # Debug print
 	self.visible = false
 	current_points = 0
+	
+func _on_inventory_full(item: InventoryItem):
+	var item_name = item.name if item.name else "this item"
+	show_feedback("Max " + item.name + " reached.")
