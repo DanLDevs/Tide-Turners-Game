@@ -13,15 +13,35 @@ var near_bin: Area2D = null # For trash/recycling
 func _ready() -> void:
 	update()
 	inventory.updated.connect(update)
+	position_selector_on_first_item()
 
 func update() -> void:
 	for i in range(slots.size()):
 		var inventory_slot: InventorySlot = inventory.slots[i]
 		slots[i].update_to_slot(inventory_slot)
+	position_selector_on_first_item()
 		
 func move_selector() -> void:
-	currently_selected = (currently_selected + 1) % slots.size()
-	selector.global_position = slots[currently_selected].global_position
+	var original_index = currently_selected
+	var found = false
+	
+	for i in range(slots.size()):
+		currently_selected = (currently_selected + 1) % slots.size()
+		if inventory.slots[currently_selected].item != null:
+			found = true
+			break
+	if found:
+		selector.global_position = slots[currently_selected].global_position
+	else:
+		# If no slot with item is found, revert to original position
+		currently_selected = original_index
+
+func position_selector_on_first_item() -> void:
+	for i in range(slots.size()):
+		if inventory.slots[i].item != null:
+			currently_selected = i
+			selector.global_position = slots[i].global_position
+			return
 
 func _unhandled_input(event) -> void:
 	if event.is_action_pressed("use_item"):

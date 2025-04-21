@@ -7,7 +7,7 @@
 size = Vector2(94, 116)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t5sml"]
-size = Vector2(482, 466)
+size = Vector2(256, 300)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vgqc8"]
 atlas = ExtResource("2_tlfpw")
@@ -24,7 +24,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="RecyclingBin" type="Node2D"]
+[node name="RecyclingBin" type="Node2D" groups=["bin"]]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
