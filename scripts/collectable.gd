@@ -10,7 +10,7 @@ func collect(inventory: Inventory, score_gui: Node):
 		
 		var point_value = 1
 		var point_label = "point" if point_value == 1 else "points"
-		var message = "+" + str(point_value) + " " + point_label
+		var message = "Picked up trash! +" + str(point_value) + " " + point_label
 
 		# Show feedback if FeedbackGui exists
 		if feedback_gui:

@@ -18,6 +18,16 @@ var near_bin = null
 
 var isHurt: bool = false
 
+func _ready():
+	if inventory:
+		inventory.inventory_full.connect(_on_inventory_full)
+		
+func _on_inventory_full(item: InventoryItem):
+	var feedback_gui = get_node("../CanvasLayer/FeedbackGui")
+	if feedback_gui:
+		var item_name = item.name if item.name else "this item"
+		feedback_gui.show_feedback("Cannot carry more than 5 of this " + item_name + ".")
+
 func _physics_process(delta: float) -> void:
 	# Get movement input
 	# As good practice, you should replace UI actions with custom gameplay actions.

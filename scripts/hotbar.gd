@@ -57,5 +57,6 @@ func _unhandled_input(event) -> void:
 				feedback_gui.show_feedback("Wrong bin! -5 points") # Send feedback for wrong bin
 		else:
 			print("You must be near the correct bin to use this item.")
+			feedback_gui.show_feedback("Must be near bin to use item")
 	if event.is_action_pressed("move_selector"):
 		move_selector()
