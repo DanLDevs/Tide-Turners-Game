@@ -8,7 +8,6 @@ func _ready():
 	self.visible = false
 	print("Feedback GUI initialized.")
 
-	# Increment points and update the message
 func show_feedback(custom_message: String = ""):
 	# Use custom message if provided; otherwise, build a default message
 	var message = custom_message if custom_message != "" else str(current_points) + (" point" if abs(current_points) == 1 else " points")
@@ -32,6 +31,6 @@ func show_feedback(custom_message: String = ""):
 	tween.tween_callback(Callable(self, "_on_tween_complete"))
 	
 func _on_tween_complete():
-	print("Tween complete, resetting points") # Debug print
+	#print("Tween complete, resetting points") # Debug print
 	self.visible = false
 	current_points = 0
