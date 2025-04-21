@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://d0b6vb7lino2w"]
+[gd_scene load_steps=32 format=3 uid="uid://d0b6vb7lino2w"]
 
 [ext_resource type="Script" uid="uid://ryxvi7w74tc7" path="res://scripts/game.gd" id="1_dinhu"]
 [ext_resource type="PackedScene" uid="uid://bg48kq10cw4a2" path="res://scenes/player.tscn" id="1_uwrxv"]
@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://cii01ptftei1v" path="res://scenes/collectables/paper.tscn" id="9_rysoc"]
 [ext_resource type="Script" uid="uid://do8q1s2afug2n" path="res://scripts/CanvasLayer.gd" id="10_kvpfn"]
 [ext_resource type="PackedScene" uid="uid://cskbt43vh4ujv" path="res://scenes/inventory_gui.tscn" id="10_vtaks"]
+[ext_resource type="AudioStream" uid="uid://kcl823rxqg0i" path="res://assets/Stardew Valley OST - Stardew Valley Overture (online-audio-converter.com).ogg" id="13_ssvqc"]
 [ext_resource type="PackedScene" uid="uid://bh8tpvaljr3u6" path="res://scenes/hotbar.tscn" id="15_ir15t"]
 [ext_resource type="PackedScene" uid="uid://ctdl26oirf8oq" path="res://scenes/score_gui.tscn" id="16_ca42v"]
 [ext_resource type="PackedScene" uid="uid://dpo0gu1celqdd" path="res://scenes/feedback_gui.tscn" id="17_rysoc"]
@@ -3303,6 +3304,10 @@ position = Vector2(-63, -917)
 scale = Vector2(0.22, 0.22)
 
 [node name="Player" parent="." instance=ExtResource("1_uwrxv")]
+
+[node name="MusicPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("13_ssvqc")
+autoplay = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 process_mode = 3

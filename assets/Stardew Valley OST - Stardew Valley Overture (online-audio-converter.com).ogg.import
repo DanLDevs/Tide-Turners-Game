@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://kcl823rxqg0i"
+path="res://.godot/imported/Stardew Valley OST - Stardew Valley Overture (online-audio-converter.com).ogg-12b94a173137893deeda1b0779b000f4.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/Stardew Valley OST - Stardew Valley Overture (online-audio-converter.com).ogg"
+dest_files=["res://.godot/imported/Stardew Valley OST - Stardew Valley Overture (online-audio-converter.com).ogg-12b94a173137893deeda1b0779b000f4.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
