@@ -25,6 +25,7 @@ patch_margin_right = 7
 patch_margin_bottom = 7
 
 [node name="Score" type="Control" parent="."]
+custom_minimum_size = Vector2(146, 0)
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
