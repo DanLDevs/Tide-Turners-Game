@@ -5,16 +5,17 @@ extends Area2D
 func collect(inventory: Inventory, score_gui: Node):
 	var success = inventory.insert(itemRes)
 	if success:
-		var point_value = 1
-		var point_label = "point" if point_value == 1 else "points"
-		var message = "+" + str(point_value) + " " + point_label
-		
 		# Find FeedbackGui in the main scene tree
 		var feedback_gui = get_tree().root.get_node("Game/CanvasLayer/FeedbackGui")
 		
+		var point_value = 1
+		var point_label = "point" if point_value == 1 else "points"
+		var message = "+" + str(point_value) + " " + point_label
+
 		# Show feedback if FeedbackGui exists
 		if feedback_gui:
-			feedback_gui.show_feedback(1)
+			feedback_gui.current_points += point_value
+			feedback_gui.show_feedback(message)
 		else:
 			print("Error: FeedbackGui is not found!")
 		score_gui.add_score(point_value)

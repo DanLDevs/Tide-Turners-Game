@@ -27,12 +27,15 @@ func _unhandled_input(event) -> void:
 	if event.is_action_pressed("use_item"):
 		#inventory.use_item_at_index(currently_selected)
 		var item = inventory.slots[currently_selected].item
-		if item and near_bin and item.trash_type == near_bin.bin_type:
-			inventory.use_item_at_index(currently_selected)
-			score_gui.add_score(10) # Correct bin
-			feedback_gui.show_feedback(10, "+10 points! Correct bin!")
+		if item and near_bin:
+			if item and near_bin and item.trash_type == near_bin.bin_type:
+				inventory.use_item_at_index(currently_selected)
+				score_gui.add_score(10) # Add points to score
+				feedback_gui.show_feedback("+10 points") # Show feedback for correct bin
+			else:
+				score_gui.subtract_score(5) # Subtract points for wrong bin
+				feedback_gui.show_feedback("-5 points") # Send feedback for wrong bin
 		else:
-			score_gui.subtract_score(5)
-			feedback_gui.show_feedback(-5, "-5 points! Wrong bin!")
+			print("You must be near the correct bin to use this item.")
 	if event.is_action_pressed("move_selector"):
 		move_selector()
