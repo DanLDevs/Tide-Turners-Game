@@ -6,6 +6,7 @@ const GRAVITY = -600.0 # Simulated gravity pulling the player down
 @onready var animated_sprite = $AnimatedSprite2D
 @onready var hurtBox = $hurtBox
 @onready var hotbar = $"../CanvasLayer/Hotbar"
+@onready var score_gui = $"../CanvasLayer/ScoreGui"
 
 @export var inventory: Inventory
 
@@ -51,17 +52,19 @@ func _physics_process(delta: float) -> void:
 		
 func _on_bin_area_entered(area):
 	if area.is_in_group("bin"):
+		near_bin = area
 		hotbar.near_bin = area
-		print("Entered", area.bin_type)
+		#print("Entered", area.name)
 		
 func _on_bin_area_exited(area):
 	if area == near_bin:
+		near_bin = null
 		hotbar.near_bin = null
-		print("Exited bin area")
+		#print("Exited bin area", area.name)
 		
 func _on_hurt_box_area_entered(area):
 	if area.has_method("collect"):
-		area.collect(inventory)
+		area.collect(inventory, score_gui)
 
 func player():
 	pass

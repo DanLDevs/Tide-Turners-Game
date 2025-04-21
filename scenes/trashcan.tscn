@@ -7,7 +7,7 @@
 size = Vector2(12, 17)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7au10"]
-size = Vector2(67, 69)
+size = Vector2(33, 41)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1btkc"]
 atlas = ExtResource("2_1btkc")
@@ -24,7 +24,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="TrashBin" type="Node2D"]
+[node name="TrashBin" type="Node2D" groups=["bin"]]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 

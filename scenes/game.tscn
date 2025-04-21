@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://d0b6vb7lino2w"]
+[gd_scene load_steps=31 format=3 uid="uid://d0b6vb7lino2w"]
 
 [ext_resource type="Script" uid="uid://ryxvi7w74tc7" path="res://scripts/game.gd" id="1_dinhu"]
 [ext_resource type="PackedScene" uid="uid://bg48kq10cw4a2" path="res://scenes/player.tscn" id="1_uwrxv"]
@@ -15,6 +15,8 @@
 [ext_resource type="Script" uid="uid://do8q1s2afug2n" path="res://scripts/CanvasLayer.gd" id="10_kvpfn"]
 [ext_resource type="PackedScene" uid="uid://cskbt43vh4ujv" path="res://scenes/inventory_gui.tscn" id="10_vtaks"]
 [ext_resource type="PackedScene" uid="uid://bh8tpvaljr3u6" path="res://scenes/hotbar.tscn" id="15_ir15t"]
+[ext_resource type="PackedScene" uid="uid://ctdl26oirf8oq" path="res://scenes/score_gui.tscn" id="16_ca42v"]
+[ext_resource type="PackedScene" uid="uid://dpo0gu1celqdd" path="res://scenes/feedback_gui.tscn" id="17_rysoc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lnu2h"]
 texture = ExtResource("2_yqjtg")
@@ -3261,7 +3263,7 @@ layer_2/name = "collectables"
 layer_2/tile_data = PackedInt32Array(-393306, 3, 131072, -589897, 3, 131072, -131130, 3, 131072, -131118, 3, 131072, -589868, 3, 131072, -327690, 3, 131072, -655359, 3, 131072, -524258, 3, 131072, -65499, 3, 131072, -458702, 3, 131072, 65586, 3, 131072, -196547, 3, 131072, 65609, 3, 131072, -393138, 3, 131072, 95, 3, 131072, -720797, 3, 131072, -1310618, 3, 131072, -1507254, 3, 131072, -2555815, 3, 131072, -2555844, 3, 131072, -1572814, 3, 131072, -1834976, 3, 131072, -3080100, 3, 131072, -2621413, 3, 131072, -3211210, 3, 131072, -3473340, 3, 131072, -3080177, 3, 131072, -1966083, 3, 131072, -3080193, 3, 131072, -1835044, 3, 131072, -3145750, 3, 131072, -2555956, 3, 131072, -3276868, 3, 131072, -1507420, 3, 131072, -2818137, 3, 131072, -3211366, 3, 131072, -2162787, 3, 131072, -393319, 3, 196608, -98, 3, 196608, -131156, 3, 196608, -589891, 3, 196608, -262196, 3, 196608, -42, 3, 196608, -262177, 3, 196608, -589849, 3, 196608, -131086, 3, 196608, -917510, 3, 196608, 196598, 3, 196608, -393199, 3, 196608, -786410, 3, 196608, 65560, 3, 196608, -262103, 3, 196608, -720846, 3, 196608, -655299, 3, 196608, -130994, 3, 196608, -655269, 3, 196608, -65433, 3, 196608, -1441698, 3, 196608, -1703836, 3, 196608, -2228131, 3, 196608, -1900457, 3, 196608, -2949017, 3, 196608, -2162614, 3, 196608, -1376193, 3, 196608, -1769415, 3, 196608, -1376222, 3, 196608, -1507302, 3, 196608, -1638394, 3, 196608, -1966065, 3, 196608, -2359286, 3, 196608, -2097129, 3, 196608, -2359267, 3, 196608, -2031574, 3, 196608, -3080121, 3, 196608, -2817999, 3, 196608, -3407867, 3, 196608, -3080158, 3, 196608, -3276760, 3, 196608, -3604452, 3, 196608, -2949042, 3, 196608, -3473320, 3, 196608, -3604420, 3, 196608, -2228230, 3, 196608, -1310741, 3, 196608, -1769488, 3, 196608, -2097172, 3, 196608, -1835037, 3, 196608, -2949137, 3, 196608, -2818078, 3, 196608, -2949162, 3, 196608, -2490411, 3, 196608, -2097198, 3, 196608, -1966154, 3, 196608, -1376336, 3, 196608, -3014717, 3, 196608, -2424921, 3, 196608, -1376358, 3, 262144, -1769556, 3, 262144, -1310787, 3, 262144, -2490469, 3, 262144, -3211359, 3, 262144, -3342416, 3, 262144, -3211321, 3, 262144, -2490434, 3, 262144, -3342370, 3, 262144, -3276815, 3, 262144, -2162714, 3, 262144, -2490380, 3, 262144, -1835063, 3, 262144, -1376305, 3, 262144, -1310752, 3, 262144, -1507330, 3, 262144, -2490372, 3, 262144, -2883589, 3, 262144, -3670002, 3, 262144, -2818040, 3, 262144, -3211239, 3, 262144, -2490351, 3, 262144, -2031610, 3, 262144, -2555865, 3, 262144, -3407825, 3, 262144, -2686908, 3, 262144, -3473330, 3, 262144, -2162635, 3, 262144, -1834942, 3, 262144, -1310677, 3, 262144, -1441776, 3, 262144, -2359212, 3, 262144, -1441707, 3, 262144, -2359191, 3, 262144, -3342238, 3, 262144, -327583, 3, 262144, -655279, 3, 262144, 131157, 3, 262144, -65469, 3, 262144, -393163, 3, 262144, 196648, 3, 262144, -589791, 3, 262144, -131048, 3, 262144, -131065, 3, 262144, -589816, 3, 262144, -458765, 3, 262144, -25, 3, 262144, -524324, 3, 262144, -589880, 3, 262144, -262210, 3, 262144, -524370, 3, 262144, -196706, 3, 262144, -655463, 3, 262144, -3342337, 3, 262144, -3014662, 3, 196608, 130967, 3, 131072)
 
 [node name="Trashcan" parent="." instance=ExtResource("4_lbhrr")]
-position = Vector2(-384, -229)
+position = Vector2(-447, -226)
 scale = Vector2(1.5, 1.5)
 
 [node name="Trashcan2" parent="." instance=ExtResource("4_lbhrr")]
@@ -3273,7 +3275,7 @@ position = Vector2(653, -210)
 scale = Vector2(1.5, 1.5)
 
 [node name="Trashcan4" parent="." instance=ExtResource("4_lbhrr")]
-position = Vector2(1567, -208)
+position = Vector2(1500, -208)
 scale = Vector2(1.5, 1.5)
 
 [node name="Trashcan5" parent="." instance=ExtResource("4_lbhrr")]
@@ -3285,11 +3287,11 @@ position = Vector2(-529, -229)
 scale = Vector2(0.22, 0.22)
 
 [node name="RecyclingBin2" parent="." instance=ExtResource("6_0tnpc")]
-position = Vector2(-1615, -215)
+position = Vector2(-1551, -215)
 scale = Vector2(0.22, 0.22)
 
 [node name="RecyclingBin3" parent="." instance=ExtResource("6_0tnpc")]
-position = Vector2(514, -208)
+position = Vector2(580, -210)
 scale = Vector2(0.22, 0.22)
 
 [node name="RecyclingBin4" parent="." instance=ExtResource("6_0tnpc")]
@@ -3297,7 +3299,7 @@ position = Vector2(1424, -208)
 scale = Vector2(0.22, 0.22)
 
 [node name="RecyclingBin5" parent="." instance=ExtResource("6_0tnpc")]
-position = Vector2(-65, -938)
+position = Vector2(-63, -917)
 scale = Vector2(0.22, 0.22)
 
 [node name="Player" parent="." instance=ExtResource("1_uwrxv")]
@@ -3305,19 +3307,6 @@ scale = Vector2(0.22, 0.22)
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 process_mode = 3
 script = ExtResource("10_kvpfn")
-
-[node name="InventoryGui" parent="CanvasLayer" instance=ExtResource("10_vtaks")]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -51.5
-offset_top = -27.0
-offset_right = 51.5
-offset_bottom = 27.0
-grow_horizontal = 2
-grow_vertical = 2
 
 [node name="Hotbar" parent="CanvasLayer" instance=ExtResource("15_ir15t")]
 anchors_preset = 7
@@ -3331,6 +3320,29 @@ offset_right = 101.5
 offset_bottom = -6.0
 grow_horizontal = 2
 grow_vertical = 0
+
+[node name="InventoryGui" parent="CanvasLayer" instance=ExtResource("10_vtaks")]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -102.5
+offset_top = -50.0
+offset_right = 102.5
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ScoreGui" parent="CanvasLayer" instance=ExtResource("16_ca42v")]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -230.0
+offset_right = -76.0
+grow_horizontal = 0
+
+[node name="FeedbackGui" parent="CanvasLayer" instance=ExtResource("17_rysoc")]
 
 [connection signal="closed" from="CanvasLayer/InventoryGui" to="." method="_on_inventory_gui_closed"]
 [connection signal="opened" from="CanvasLayer/InventoryGui" to="." method="_on_inventory_gui_opened"]

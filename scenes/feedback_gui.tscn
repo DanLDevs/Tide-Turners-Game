@@ -1,0 +1,56 @@
+[gd_scene load_steps=5 format=3 uid="uid://dpo0gu1celqdd"]
+
+[ext_resource type="Script" uid="uid://syywipqql6t2" path="res://scripts/feedback_gui.gd" id="1_420jn"]
+[ext_resource type="Texture2D" uid="uid://j8n8g6vqbsw6" path="res://assets/time_gui.png" id="1_iqfn7"]
+[ext_resource type="FontFile" uid="uid://dx6e0j6emqwwx" path="res://assets/Kenney Mini Square.ttf" id="2_420jn"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_mloc0"]
+font = ExtResource("2_420jn")
+font_size = 20
+font_color = Color(0.14902, 0.168627, 0.266667, 1)
+
+[node name="FeedbackGui" type="Control"]
+custom_minimum_size = Vector2(146, 61)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 146.0
+offset_bottom = 61.0
+scale = Vector2(1.5, 1.5)
+script = ExtResource("1_420jn")
+
+[node name="Background" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_right = 146.0
+offset_bottom = 61.0
+texture = ExtResource("1_iqfn7")
+region_rect = Rect2(0, 0, 15, 15)
+patch_margin_left = 7
+patch_margin_top = 7
+patch_margin_right = 7
+patch_margin_bottom = 7
+
+[node name="Control" type="Control" parent="Background"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -70.0
+offset_top = -26.0
+offset_right = 70.0
+offset_bottom = 26.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MessageLabel" type="Label" parent="Background/Control"]
+layout_mode = 0
+offset_left = 2.33333
+offset_top = 0.166667
+offset_right = 139.333
+offset_bottom = 54.1667
+text = "Wrong bin! -5 points"
+label_settings = SubResource("LabelSettings_mloc0")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3

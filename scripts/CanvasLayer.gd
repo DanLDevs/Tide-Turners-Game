@@ -1,6 +1,7 @@
 extends CanvasLayer
 
 @onready var inventory = $InventoryGui
+@onready var score_gui = $ScoreGui
 
 func _ready():
 	inventory.close()
