@@ -6,7 +6,6 @@
 
 [sub_resource type="LabelSettings" id="LabelSettings_mloc0"]
 font = ExtResource("2_420jn")
-font_size = 20
 font_color = Color(0.14902, 0.168627, 0.266667, 1)
 
 [node name="FeedbackGui" type="Control"]
@@ -49,7 +48,6 @@ offset_left = 2.33333
 offset_top = 0.166667
 offset_right = 139.333
 offset_bottom = 54.1667
-text = "Wrong bin! -5 points"
 label_settings = SubResource("LabelSettings_mloc0")
 horizontal_alignment = 1
 vertical_alignment = 1
